@@ -1,0 +1,60 @@
+<html>
+<title>My Homepage</title>
+<h1>My Homepage</h1>
+<h2>Where I'll be in the fall</h2>
+<img src="images/image for wvu.jpg" onclick="alert('Go Mountaineers')"</img></center>
+<hr>
+<h2>Mount Rushmore</h2>
+<img src="images/pre rush.jpg" height="400" width="400"  onmouseover="src='images/post rush.jpeg'" onmouseout="src='images/pre rush.jpg'"</img>
+
+<script>
+  function greeting() {
+    var input = prompt("Provide your name: ");
+    alert("Your name is " + input);
+  }
+greeting("Hello"); //call the function
+
+function checkAddress(fieldId){
+var element = document.getElementById(fieldId);
+var email = element.value;
+
+if(email === ""){
+  alert("Email Address is required");
+}
+  else if(email.indexOf("@") === -1){
+    alert("The @ is Missing");
+  } else {
+    element.value = "Email is Validated";
+  }
+}
+function checkName(fieldId){
+  var n = document.getElementById(fieldId);
+  var name = element.value;
+}
+  if(name === " "){
+    alert("Name is required");
+  }
+    else if(name.indexOf("#,$,%,&") === -1){
+      alert("No special Characters");
+    } else {
+      n.value = "Name is Entered into the drawing";
+    }
+
+  </script>
+</head>
+<body>
+<form onsubmit="checkAddress('email'); return false;">
+  Email:<br>
+
+  <input type="text" id = "email">
+  <input type="submit" value="Submit">
+</form>
+<form onsubmit="checkName('name'); return false;">
+  Name:<br>
+
+  <input type="text" id = "Name">
+  <input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
